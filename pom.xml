@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>kotakbank Releases Nexus Repository</name>
-	      <url>http://172.31.6.242:8090/ashwath/repository/kotakbank-release/</url>
+	      <url>http://172.31.10.115:8090/ashwath/repository/kotakbank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>kotakbank Snapshot Nexus Repository</name>
-	      <url>http://172.31.6.242:8090/ashwath/repository/kotakbank-snapshot/</url>
+	      <url>http://172.31.10.115:8090/ashwath/repository/kotakbank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
