@@ -1,0 +1,37 @@
+pipeline{
+    
+    agent any
+    
+    tools{
+        maven 'maven3.9.9'
+    } //tools closing
+    
+    stages{
+        
+        stage('source code'){
+            steps{
+                git branch: 'development', credentialsId: '06731c37-f3ca-4e9b-ace4-fb0a3bd52408', url: 'https://github.com/devashtest/maven-web-application.git'
+            }
+        } //source code closing
+        
+        stage('build'){
+            steps{
+                sh "mvn clean package"
+            }
+        } //build closing
+        
+        stage('sonar qube report'){
+            steps{
+                sh "mvn clean sonar:sonar"
+            }
+        } //sonar qube closing
+        
+        stage('artifactory'){
+            steps{
+                sh "mvn clean deploy"
+            }
+        } // nexus closing
+    
+    
+    } //stages closing
+} //pipeline clsing
